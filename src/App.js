@@ -6,7 +6,7 @@ import { Shop } from "./pages/shop/shop";
 import { Contact } from "./pages/contact";
 import { Cart } from "./pages/cart/cart";
 import { ShopContextProvider } from "./context/shop-context";
-import { ToastContainer, toast, Bounce  } from 'react-toastify';
+import { ToastContainer, toast  } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
         </Router>
         <ToastContainer
         position="top-right"
-        autoClose={5000}
+        autoClose={2500}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
@@ -33,7 +33,6 @@ function App() {
         draggable
         pauseOnHover
         theme="light"
-        transition = {Bounce}
       />
       </ShopContextProvider>
       
