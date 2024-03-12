@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { ShopContext } from "../../context/shop-context";
 import Toast from "./toast"; 
 import "./shop.css";
+import { toast } from "react-toastify";
 
 
 export const Product = (props) => {
@@ -11,10 +12,11 @@ export const Product = (props) => {
 
   const handleAddToCart = () => {
     addToCart(id);
+    toast.success("wow so esey!")
     setShowMessage(true); // Show message when item is added to cart
-    setTimeout(() => {
-      setShowMessage(false); 
-    }, 2000); 
+    // setTimeout(() => {
+    //   setShowMessage(false); 
+    // }, 2000); 
   };
 
   return (
