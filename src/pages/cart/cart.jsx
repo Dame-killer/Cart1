@@ -2,19 +2,19 @@ import React, { useContext } from "react";
 import { ShopContext } from "../../context/shop-context";
 import { PRODUCTS } from "../../products";
 import { CartItem } from "./cart-item";
-import {useCheckFrom} from "../shop/check"
+import { useCheckFrom } from "../shop/check";
 import { useNavigate } from "react-router-dom";
 import "./cart.css";
 
 export const Cart = () => {
-const { cartItems, getTotalCartAmount } = useContext(ShopContext);
-const totalAmount = getTotalCartAmount();
-const navigate = useNavigate();
+  const { cartItems, getTotalCartAmount } = useContext(ShopContext);
+  const totalAmount = getTotalCartAmount();
+  const navigate = useNavigate();
 
-const { formData, handleChange, handleSubmit } = useCheckFrom();
+  const { formData, handleChange, handleSubmit } = useCheckFrom();
 
-return (
-  <div className="cart">
+  return (
+    <div className="cart">
       <div>
         <h1>Your Cart Items</h1>
       </div>
@@ -76,5 +76,5 @@ return (
         </div>
       )}
     </div>
-);
+  );
 };
