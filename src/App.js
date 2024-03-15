@@ -1,5 +1,5 @@
 import React from "react";
-// import "./App.css";
+import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/navbar";
 import { Shop } from "./pages/shop/shop";
@@ -9,11 +9,13 @@ import { ShopContextProvider } from "./context/shop-context";
 import { ToastContainer } from 'react-toastify';
 import Game from "./pages/cart/demo";
 import 'react-toastify/dist/ReactToastify.css';
+import Gallery from "./demo1";
 
 function App() {
   return (
     <>
-    <Game />
+    <Gallery />
+    {/* <Game /> */}
     {/* <div className="App">
       <ShopContextProvider>
         <Router>
@@ -23,7 +25,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
           </Routes>
-        </Router> */}
+        </Router>
         <ToastContainer
         position="top-right"
         autoClose={2500}
@@ -36,8 +38,7 @@ function App() {
         pauseOnHover
         theme="light"
       />
-      {/* </ShopContextProvider>
-      
+      </ShopContextProvider>
     </div> */}
     </>
   );
