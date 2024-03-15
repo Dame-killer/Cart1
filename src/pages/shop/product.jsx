@@ -11,7 +11,7 @@ export const Product = (props) => {
 
   const handleAddToCart = () => {
     addToCart(id);
-    toast.success("Display a blue notification of type info", {
+    toast.success("Thêm sản phẩm thành công !", {
       theme: "dark",
     });
     setShowMessage(true); // Show message when item is added to cart
